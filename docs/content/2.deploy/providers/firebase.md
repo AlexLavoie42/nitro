@@ -274,3 +274,19 @@ export default defineNuxtConfig({
 })
 ```
 ::
+
+You will also need to update `firebase.json`
+
+```ts
+{
+  site: "<your_project_id>",
+  public: ".output/public",
+  cleanUrls: true,
+  rewrites: [
+    {
+      source: "**",
+      function: "<new_function_name>",
+    },
+  ],
+}
+```
